@@ -1,0 +1,10 @@
+*.tfstate
+*.tfstate.*
+crash.log
+.crash/
+.terraform/
+.terraform.lock.hcl
+.DS_Store
+*.swp
+.idea/
+.vscode/
