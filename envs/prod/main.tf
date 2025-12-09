@@ -60,5 +60,6 @@ module "compute_worker" {
   admin_username       = var.admin_username
   admin_ssh_public_key = var.admin_ssh_public_key
 
-  vm_name = "vm-terraform-worker-prod"
+  vm_name          = "vm-terraform-worker-prod"
+  enable_public_ip = false
 }
