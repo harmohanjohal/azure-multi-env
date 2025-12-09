@@ -1,3 +1,4 @@
+#Dev Env variables
 variable "location" {
   description = "Azure region"
   type        = string
