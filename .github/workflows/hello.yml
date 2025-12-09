@@ -1,4 +1,4 @@
-ame: Hello Workflow
+name: Hello Workflow
 
 on:
   push:
