@@ -31,10 +31,10 @@ module "network" {
 module "compute_web" {
   source = "../../modules/compute"
 
-  location             = module.network.resource_group_location
-  resource_group_name  = module.network.resource_group_name
-  subnet_id            = module.network.subnet_id
-  nsg_id               = module.network.nsg_id
+  location            = module.network.resource_group_location
+  resource_group_name = module.network.resource_group_name
+  subnet_id           = module.network.subnet_id
+  nsg_id              = module.network.nsg_id
 
   admin_username       = var.admin_username
   admin_ssh_public_key = var.admin_ssh_public_key
@@ -45,10 +45,10 @@ module "compute_web" {
 module "compute_worker" {
   source = "../../modules/compute"
 
-  location             = module.network.resource_group_location
-  resource_group_name  = module.network.resource_group_name
-  subnet_id            = module.network.subnet_id
-  nsg_id               = module.network.nsg_id
+  location            = module.network.resource_group_location
+  resource_group_name = module.network.resource_group_name
+  subnet_id           = module.network.subnet_id
+  nsg_id              = module.network.nsg_id
 
   admin_username       = var.admin_username
   admin_ssh_public_key = var.admin_ssh_public_key
