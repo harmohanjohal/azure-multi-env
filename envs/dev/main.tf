@@ -26,6 +26,12 @@ module "network" {
   vnet_address_space      = ["10.0.0.0/16"]
   subnet_address_prefixes = ["10.0.1.0/24"]
   ssh_source_ip           = var.ssh_source_ip
+
+  tags = {
+    environment = "dev"
+    project     = "azure-multi-env"
+    owner       = "harmohan"
+  }
 }
 
 module "compute_web" {

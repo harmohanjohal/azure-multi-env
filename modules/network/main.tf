@@ -1,5 +1,11 @@
 // modules/network/main.tf
 
+variable "tags" {
+  type        = map(string)
+  description = "Common tags to apply to network resources"
+  default     = {}
+}
+
 variable "location" {
   type        = string
   description = "Azure region"
@@ -28,6 +34,7 @@ variable "ssh_source_ip" {
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
+  tags     = var.tags
 }
 
 resource "azurerm_virtual_network" "vnet" {
