@@ -45,7 +45,8 @@ module "compute_web" {
   admin_username       = var.admin_username
   admin_ssh_public_key = var.admin_ssh_public_key
 
-  vm_name = "vm-terraform-web-dev"
+  vm_name          = "vm-terraform-web-dev"
+  enable_public_ip = true
 }
 
 module "compute_worker" {
